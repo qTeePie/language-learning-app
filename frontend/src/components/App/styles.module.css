@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content {
+  flex: 1 0 auto; /* This element will grow to take up remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.content > :first-child {
+  flex: 1;
+}

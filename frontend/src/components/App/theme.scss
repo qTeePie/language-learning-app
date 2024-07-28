@@ -1,0 +1,25 @@
+// src/styles/custom.scss
+
+// Override Bootstrap's default variables
+$primary: #bc0df0; // Custom primary color
+$secondary: #6c757d; // Neutral gray
+$success: #28a745; // Green for success messages
+$info: #17a2b8; // Blue for informational messages
+$warning: #ffc107; // Yellow for warnings
+$danger: #dc3545; // Red for errors
+$light: #f8f9fa; // Light background
+$dark: #343a40; // Dark background
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+// Import Bootstrap's SCSS
+@import '~bootstrap/scss/bootstrap.scss';
