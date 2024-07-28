@@ -1,13 +1,18 @@
 import requests
+import logging
 from fastapi import HTTPException
 from config import TRANSLATION_API_URL, DICTIONARY_API_URL
 
+logger = logging.getLogger(__name__)
+
 def fetch_translation(word: str) -> str:
+    logger.info(f"Fetching {TRANSLATION_API_URL.format(word=word)}")
     response = requests.get(TRANSLATION_API_URL.format(word=word))
     if response.status_code != 200:
         raise HTTPException(status_code=404, detail="Translation not found")
     translation_data = response.json()
     italian_word = translation_data['responseData']['translatedText']
+    logger.info(f"{italian_word}")
     return italian_word
 
 def fetch_definition(word: str) -> dict:

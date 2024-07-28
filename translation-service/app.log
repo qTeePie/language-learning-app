@@ -1,0 +1,22 @@
+2024-07-28 16:43:03,856 - services.translation_service - INFO - https://api.mymemory.translated.net/get?q=Sedia&langpair=en|it
+2024-07-28 16:43:03,862 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mymemory.translated.net:443
+2024-07-28 16:43:04,402 - urllib3.connectionpool - DEBUG - https://api.mymemory.translated.net:443 "GET /get?q=Sedia&langpair=en%7Cit HTTP/11" 200 1147
+2024-07-28 16:43:04,405 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.dictionaryapi.dev:443
+2024-07-28 16:43:04,460 - urllib3.connectionpool - DEBUG - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/it/Venticinquesima HTTP/11" 404 None
+2024-07-28 16:44:04,458 - services.translation_service - INFO - Fetchinghttps://api.mymemory.translated.net/get?q=Sedia&langpair=en|it
+2024-07-28 16:44:04,464 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mymemory.translated.net:443
+2024-07-28 16:44:05,009 - urllib3.connectionpool - DEBUG - https://api.mymemory.translated.net:443 "GET /get?q=Sedia&langpair=en%7Cit HTTP/11" 200 1147
+2024-07-28 16:44:05,011 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.dictionaryapi.dev:443
+2024-07-28 16:44:05,075 - urllib3.connectionpool - DEBUG - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/it/Venticinquesima HTTP/11" 404 None
+2024-07-28 16:45:42,856 - services.translation_service - INFO - Fetching https://api.mymemory.translated.net/get?q=Sedia&langpair=en|it
+2024-07-28 16:45:42,865 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mymemory.translated.net:443
+2024-07-28 16:45:43,369 - urllib3.connectionpool - DEBUG - https://api.mymemory.translated.net:443 "GET /get?q=Sedia&langpair=en%7Cit HTTP/11" 200 1147
+2024-07-28 16:45:43,370 - services.translation_service - INFO - Venticinquesima
+2024-07-28 16:45:43,372 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.dictionaryapi.dev:443
+2024-07-28 16:45:43,443 - urllib3.connectionpool - DEBUG - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/it/Venticinquesima HTTP/11" 404 None
+2024-07-28 16:46:10,145 - services.translation_service - INFO - Fetching https://api.mymemory.translated.net/get?q=chair&langpair=en|it
+2024-07-28 16:46:10,148 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.mymemory.translated.net:443
+2024-07-28 16:46:10,618 - urllib3.connectionpool - DEBUG - https://api.mymemory.translated.net:443 "GET /get?q=chair&langpair=en%7Cit HTTP/11" 200 1091
+2024-07-28 16:46:10,619 - services.translation_service - INFO - sedia
+2024-07-28 16:46:10,621 - urllib3.connectionpool - DEBUG - Starting new HTTPS connection (1): api.dictionaryapi.dev:443
+2024-07-28 16:46:11,042 - urllib3.connectionpool - DEBUG - https://api.dictionaryapi.dev:443 "GET /api/v2/entries/it/sedia HTTP/11" 404 None
