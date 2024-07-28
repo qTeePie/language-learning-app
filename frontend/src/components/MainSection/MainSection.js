@@ -1,5 +1,4 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import styles from "./styles.module.css";
 
 export const MainSection = () => {
@@ -7,7 +6,7 @@ export const MainSection = () => {
     <div className={styles.main}>
       <div>
         <h1 className={styles.heading}>
-          Enhance your language skills and explore new
+        Unlock the 🌍 One Language at a Time
         </h1>
       </div>
     </div>

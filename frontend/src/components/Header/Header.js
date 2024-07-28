@@ -4,7 +4,12 @@ import styles from "./styles.module.css";
 
 export const Header = () => {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" className={styles.navbar} fixed="top">
+    <Navbar
+      bg="dark"
+      expand="lg"
+      className={styles.navbar}
+      fixed="top"
+    >
       <Container>
         <Navbar.Brand href="#">Positive Learning</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

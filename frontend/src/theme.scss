@@ -1,15 +1,14 @@
-// src/styles/custom.scss
-
-// Override Bootstrap's default variables
-$primary: #bc0df0; // Custom primary color
-$secondary: #6c757d; // Neutral gray
+// Custom Color Variables
+$primary: #8000BC; // Vibrant purple
+$secondary: #343a40; // Neutral gray
 $success: #28a745; // Green for success messages
 $info: #17a2b8; // Blue for informational messages
 $warning: #ffc107; // Yellow for warnings
 $danger: #dc3545; // Red for errors
 $light: #f8f9fa; // Light background
-$dark: #343a40; // Dark background
+$dark: #242728; // Dark background
 
+// Custom Theme Colors
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -20,6 +19,12 @@ $theme-colors: (
   "light": $light,
   "dark": $dark
 );
+
+// Additional Custom Colors
+$purple-light: #D6A3FF; // Light purple for accents
+$purple-dark: #8000BC; // Darker shade of purple for contrast
+$background-dark: #1a1a1a; // Dark background color
+$text-light: #ffffff; // Light text color
 
 // Import Bootstrap's SCSS
 @import '~bootstrap/scss/bootstrap.scss';
