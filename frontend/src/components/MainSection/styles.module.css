@@ -1,19 +1,21 @@
 /* styles.module.css */
 .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-around;
-  color: #fff; /* text-white */
-  padding: 3rem 1rem; /* py-5 */
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem; /* py-5 */
+  }
 
-.main > div {
-  align-content: end;
-  flex-grow: 1; /* Make the first div take up twice the space */
-  margin-bottom: 2rem; /* Add space below the heading container */
-}
 
-.button {
-  margin-top: 1rem;
-}
+  .main div:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.2rem;
+  }
+  
+  .quoteIcon {
+    color: #D6A3FF; /* Custom primary color */
+  }

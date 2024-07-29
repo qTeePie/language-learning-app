@@ -1,5 +1,5 @@
-export * from "./Header";
 export * from "./MainSection";
 export * from "./Features";
-export * from "./Footer";
+export * from './organisms';
 export * from "./App";
+export * from "./atoms"

@@ -1,5 +1,6 @@
 import React from "react";
-import { Navbar, Nav, Container, Button } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Button } from 'components';
 import styles from "./styles.module.css";
 
 export const Header = () => {
@@ -11,7 +12,7 @@ export const Header = () => {
       fixed="top"
     >
       <Container>
-        <Navbar.Brand href="#">Positive Learning</Navbar.Brand>
+        <Navbar.Brand href="#">Talk 2 Me</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
@@ -21,8 +22,7 @@ export const Header = () => {
             <Nav.Link href="#insights">Cultural Insights</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href="#signin">Sign In</Nav.Link>
-            <Button variant="outline-success">Explore for Free</Button>
+            <Button hoverColor="#1a1a1a">Sign In</Button>
           </Nav>
         </Navbar.Collapse>
       </Container>

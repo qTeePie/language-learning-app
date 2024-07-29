@@ -1,0 +1,12 @@
+/* styles.module.css */
+/* styles.module.css */
+.navbar {
+  top: 0;
+  z-index: 1030;
+}
+/* Styles for small screens */
+@media (max-width: 768px) {
+  #basic-navbar-nav {
+    padding: 30px; /* Increase padding on the y-axis for small screens */
+  }
+}
