@@ -1,0 +1,21 @@
+/* styles.module.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Ensures the main container grows to fill available space */
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.icons {
+  flex: 0.5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

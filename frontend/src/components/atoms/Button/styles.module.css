@@ -1,22 +1,26 @@
 /* src/components/atoms/Button/styles.module.css */
 .button {
-    background-color: #343a40; /* Custom dark color */
-    border: none;
-    border-radius: 25px;
-    padding: 10px 16px;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s;
-    color: white;
-  }
-  
-  .button:hover {
-    background-color: var(--hover-color, #9b0ccd); /* Use CSS variable or default to custom hover color */
-    transform: scale(1.05);
-  }
-  
-  .button:focus {
-    outline: none;
-    box-shadow: none;
-  }
-  
+  background-color: #343a40; /* Custom dark color */
+  border: none;
+  border-radius: 25px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+  color: white;
+}
+
+.button:hover {
+  background-color: var(
+    --hover-color,
+    #9b0ccd
+  ); /* Use CSS variable or default to custom hover color */
+  transform: scale(1.05);
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: none;
+}

@@ -1,18 +1,24 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import { Header, MainSection, Features, Footer } from "components";
-import styles from "./styles.module.css";
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Navigate,
+} from "react-router-dom";
+import { Home } from "pages";
+import { WordDetail } from "pages";
+import { MainLayout } from "layouts";
 
 export const App = () => {
   return (
     <Router>
-      <div className={styles.main}>
-        <Header />
-        <main className={`${styles.content}`}>
-          <MainSection />
-          <Features />
-        </main>
-        <Footer />
-      </div>
+      <MainLayout>
+        <Routes>
+          <Route path="/" element={<Navigate to="/home" />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/word/:word" element={<WordDetail />} />
+        </Routes>
+      </MainLayout>
     </Router>
   );
 };

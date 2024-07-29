@@ -1,14 +1,13 @@
-// Custom Color Variables
-$primary: #8000BC; // Vibrant purple
-$secondary: #343a40; // Neutral gray
+// src/theme.scss
+$primary: #D8B4FE ; // Updated primary color
+$secondary: #6c757d; // Neutral gray
 $success: #28a745; // Green for success messages
 $info: #17a2b8; // Blue for informational messages
 $warning: #ffc107; // Yellow for warnings
 $danger: #dc3545; // Red for errors
 $light: #f8f9fa; // Light background
-$dark: #242728; // Dark background
+$dark: #343a40; // Dark background
 
-// Custom Theme Colors
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
@@ -21,10 +20,11 @@ $theme-colors: (
 );
 
 // Additional Custom Colors
-$primary-light: #D6A3FF; // Light purple for accents
-$primary-bright: #bc0df0; // Darker shade of purple for contrast
+$primary-light: #d6a3ff; // Light purple for accents
+$primary-bright: #bc0df0; 
+$primary-dark: #8000bc; // Darker shade of purple for contrast
 $background-primary: #1a1a1a; // Dark background color
 $text-light: #ffffff; // Light text color
 
 // Import Bootstrap's SCSS
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";

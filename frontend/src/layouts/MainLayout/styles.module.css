@@ -1,0 +1,20 @@
+/* styles.module.css */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  flex-shrink: 0; /* Ensures header does not shrink */
+}
+
+.content {
+  flex-grow: 2; /* Makes the content take the remaining space */
+  display: flex; /* Optional: If you want to use flex inside the content */
+  flex-direction: column;
+}
+
+.footer {
+  flex-shrink: 0; /* Ensures footer does not shrink */
+}

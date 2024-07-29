@@ -1,0 +1,19 @@
+/* src/components/molecules/Features/styles.module.css */
+.features {
+    background-color: #2A2E35; /* Slightly lighter dark background */
+    padding: 3rem 1rem;
+  }
+  
+  .feature-icon {
+    color: #D8B4FE ; /* Custom primary color */
+  }
+  
+  .feature-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-description {
+    margin-bottom: 2rem;
+  }
+  

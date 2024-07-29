@@ -6,6 +6,7 @@ import {
   faGraduationCap,
   faLanguage,
 } from "@fortawesome/free-solid-svg-icons";
+import styles from "./styles.module.css";
 
 const features = [
   {
@@ -29,14 +30,20 @@ const features = [
 
 export const Features = () => {
   return (
-    <div className="bg-primary text-white py-5">
+    <div className={styles.features}>
       <Container>
         <Row>
           {features.map((feature, index) => (
             <Col key={index} md={4} className="text-center">
-              <FontAwesomeIcon icon={feature.icon} size="3x" />
-              <h4 className="my-3">{feature.title}</h4>
-              <p>{feature.description}</p>
+              <FontAwesomeIcon
+                icon={feature.icon}
+                size="3x"
+                className={styles["feature-icon"]}
+              />
+              <h4 className={styles["feature-title"]}>{feature.title}</h4>
+              <p className={styles["feature-description"]}>
+                {feature.description}
+              </p>
             </Col>
           ))}
         </Row>
