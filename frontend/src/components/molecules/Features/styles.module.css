@@ -1,6 +1,6 @@
 /* src/components/molecules/Features/styles.module.css */
 .features {
-    background-color: #2A2E35; /* Slightly lighter dark background */
+    background-color: hsla(220, 12%, 18%, 0.56);  /* Slightly lighter dark background */
     padding: 3rem 1rem;
   }
   

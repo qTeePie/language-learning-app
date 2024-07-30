@@ -23,7 +23,26 @@
 # Go workspace file
 go.work
 
-# Byte-compiled / optimized / DLL files
+# Go modules
+go.mod
+go.sum
+
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+# Test binary, built with `go test -c`
+*.test
+
+# Python byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -196,3 +215,14 @@ build/
 # Temporary folders
 tmp/
 temp/
+
+# Go dependencies and build files
+go.sum
+go.mod
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out

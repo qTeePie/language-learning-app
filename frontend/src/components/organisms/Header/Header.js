@@ -1,16 +1,11 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Button } from 'components';
+import { Button } from "components";
 import styles from "./styles.module.css";
 
 export const Header = () => {
   return (
-    <Navbar
-      bg="dark"
-      expand="lg"
-      className={styles.navbar}
-      fixed="top"
-    >
+    <Navbar bg="dark" expand="lg" className={styles.navbar} fixed="top">
       <Container>
         <Navbar.Brand href="#">Talk 2 Me</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
