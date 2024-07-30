@@ -8,7 +8,7 @@
 // Produces:
 // 	- application/json
 
-package auth
+package app
 
 import (
 	"encoding/json"
@@ -18,8 +18,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/q10357/AuthWGo/auth/data"
-	"github.com/q10357/AuthWGo/auth/jwt"
+	"github.com/q10357/AuthWGo/data"
+	"github.com/q10357/AuthWGo/jwt"
 )
 
 // private function, searches for user in database

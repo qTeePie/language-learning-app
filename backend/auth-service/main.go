@@ -1,5 +1,3 @@
-//Inspiration: https://mattermost.com/blog/how-to-build-an-authentication-microservice-in-golang-from-scratch/
-
 package main
 
 import (
@@ -9,8 +7,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
-	"github.com/q10357/AuthWGo/auth"
-	
+	"github.com/q10357/AuthWGo/internal/app"
 )
 
 func main() {
@@ -26,9 +23,9 @@ func main() {
 	mux := http.NewServeMux()
 
 	authMux := http.NewServeMux()
-	authMux.HandleFunc("/signup", auth.SignupHandler)
-	authMux.HandleFunc("/signin", auth.SigninHandler)
-	authMux.HandleFunc("/validate", auth.ValidateHandler)
+	authMux.HandleFunc("/signup", app.SignupHandler)
+	authMux.HandleFunc("/signin", app.SigninHandler)
+	authMux.HandleFunc("/validate", app.ValidateHandler)
 
 	mux.Handle("/auth/", http.StripPrefix("/auth", authMux))
 

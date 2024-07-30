@@ -3,7 +3,7 @@ package middleware
 import (
 	"net/http"
 
-	"github.com/q10357/AuthWGo/auth/jwt"
+	"github.com/q10357/AuthWGo/jwt"
 )
 
 // later: use middleware to restrict users access to db (only their id)

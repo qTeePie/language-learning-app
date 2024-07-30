@@ -1,11 +1,11 @@
-package auth
+package app
 
 import (
 	"encoding/json"
 	"fmt"
 	"net/http"
 
-	"github.com/q10357/AuthWGo/auth/data"
+	"github.com/q10357/AuthWGo/data"
 )
 
 // adds user to db
