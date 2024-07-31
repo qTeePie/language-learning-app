@@ -1,4 +1,4 @@
-package app
+package translate
 
 import (
 	"net/http"

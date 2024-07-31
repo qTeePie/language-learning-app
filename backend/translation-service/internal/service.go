@@ -1,5 +1,5 @@
 // internal/app/service.go
-package app
+package translate
 
 import (
 	"errors"

@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 
-	"github.com/q10357/language-app/internal/app"
+	app "github.com/q10357/language-app/internal"
 	out "github.com/q10357/language-app/pkg/client"
 )
 

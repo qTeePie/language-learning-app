@@ -1,2 +1,5 @@
-﻿# chatapp-go
-Implementing a simple server for a chat application
+﻿# Dictionary API language learning app
+
+Translation happens visa Lexica API
+Source Dictionary Password (english) &rarr; target language. </br>
+Output is checked against Lexica Multigloss Dictionary to limit senses to most frequent with correct POS (place of speech).

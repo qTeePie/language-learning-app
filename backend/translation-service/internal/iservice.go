@@ -1,5 +1,5 @@
 // internal/app/service.go
-package app
+package translate
 
 type IService interface {
 	GetTranslation(sourceLang, targetLang, word, pos string) (string, error)
