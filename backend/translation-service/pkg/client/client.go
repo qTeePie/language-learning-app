@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/q10357/language-app/pkg/utils"
+	"github.com/q10357/language-app/pkg/utils/json"
 )
 
 // Client handles communication with the external translation API.
@@ -28,7 +28,7 @@ func (c *Client) Translate(sourceLang, targetLang, text string) (string, error) 
 	fmt.Println("Stepping into client...")
 	jsonData := []byte(dummyJSONData)
 
-	translationObj, err := utils.ParseTranslationObj(jsonData, targetLang)
+	translationObj, err := json.ParseTranslationObj(jsonData, targetLang)
 
 	if err != nil {
 		return "", fmt.Errorf("failed to parse translation: %w", err)
@@ -131,9 +131,14 @@ var dummyJSONData = `{
 						"is": {
 							"text": "líka"
 						},
-						"it": {
-							"text": "probabile"
-						},
+						"it": [
+							{ 
+								"text": "probabile"
+							},
+							{ 
+								"text": "text2"
+							}
+						],
 						"ja": {
 							"text": "好きだ"
 						},

@@ -1,4 +1,4 @@
-package domain
+package json
 
 // TranslationResult represents a translation from one language to another
 type TranslationResult struct {
@@ -9,12 +9,7 @@ type TranslationResult struct {
 }
 
 type APIResponse struct {
-	NResults        int      `json:"n_results"`
-	PageNumber      int      `json:"page_number"`
-	ResultsPerPage  int      `json:"results_per_page"`
-	NPages          int      `json:"n_pages"`
-	AvailableNPages int      `json:"available_n_pages"`
-	Results         []Result `json:"results"`
+	Results []Result `json:"results"`
 }
 
 type Result struct {
@@ -42,6 +37,10 @@ type Sense struct {
 }
 
 type TranslationDetail struct {
+	Text map[string][]TextItem `json:"text"`
+}
+
+type TextItem struct {
 	Text   string `json:"text"`
 	Gender string `json:"gender,omitempty"`
 }
