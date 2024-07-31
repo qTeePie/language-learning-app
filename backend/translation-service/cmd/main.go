@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+
 	errLoadEnv := godotenv.Load()
 	if errLoadEnv != nil {
 		if !os.IsNotExist(errLoadEnv) {

@@ -1,6 +1,7 @@
 package translate
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -23,9 +24,11 @@ func (h *Handler) HandleTranslation(c *gin.Context) {
 	word := c.Query("word")
 	pos := c.Query("pos")
 
+	fmt.Println("Stepped into handler...")
+
 	translation, err := h.service.GetTranslation(sourceLang, targetLang, word, pos)
 	if err != nil {
-		c.JSON(http.StatusNotFound, gin.H{"error": "Translation not found"})
+		c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
 		return
 	}
 
