@@ -37,7 +37,7 @@ type Sense struct {
 }
 
 type TranslationDetail struct {
-	Text map[string][]TextItem `json:"text"`
+	TextItems []TextItem
 }
 
 type TextItem struct {

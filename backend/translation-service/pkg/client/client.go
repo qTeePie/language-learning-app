@@ -24,25 +24,114 @@ func NewClient(baseURL, apiKey string) *Client {
 }
 
 // Translate sends a translation request to the external API and returns the translation.
-func (c *Client) Translate(sourceLang, targetLang, text string) (string, error) {
+func (c *Client) Translate(sourceLang, targetLang, text string) ([]json.TranslationResult, error) {
 	fmt.Println("Stepping into client...")
 	jsonData := []byte(dummyJSONData)
 
 	translationObj, err := json.ParseTranslationObj(jsonData, targetLang)
 
 	if err != nil {
-		return "", fmt.Errorf("failed to parse translation: %w", err)
+		return nil, fmt.Errorf("failed to parse translation: %w", err)
 	}
 
 	for index, obj := range translationObj {
 		fmt.Printf("Result %d: %s\n", index, obj.Sense)
 	}
 
-	return "translated", nil
+	return translationObj, nil
 
 }
 
 var dummyJSONData = `{
+	"n_results": 1,
+	"page_number": 1,
+	"results_per_page": 10,
+	"n_pages": 1,
+	"available_n_pages": 1,
+	"results": [
+		{
+			"id": "PW68729e22a9d0",
+			"source": "password",
+			"language": "en",
+			"headword": {
+				"text": "like",
+				"pronunciation": {
+					"value": "laik"
+				},
+				"pos": "verb"
+			},
+			"senses": [
+				{
+					"id": "PS73027db1b7a3",
+					"definition": "to be pleased with; to find pleasant or agreeable",
+					"translations": {
+						"py": 
+							{
+								"text": "piacere"
+							},
+						"it": [
+							{
+								"text": "piacere"
+							},
+							{
+								"text": "gradire"
+							}
+						],
+						"en": [
+							{
+								"text": "piacere"
+							},
+							{
+								"text": "gradire"
+							}
+						]
+					},
+					"examples": [
+						{
+							"text": "I like him very much."
+						},
+						{
+							"text": "I like the way you've decorated this room."
+						}
+					]
+				},
+				{
+					"id": "PS73027db1b7a3",
+					"definition": "to be pleased with; to find pleasant or agreeable",
+					"translations": {
+						"it": [
+							{
+								"text": "piacere"
+							},
+							{
+								"text": "gradire"
+							}
+						],
+						"en": [
+							{
+								"text": "piacere"
+							},
+							{
+								"text": "gradire"
+							}
+						]
+					},
+					"examples": [
+						{
+							"text": "I like him very much."
+						},
+						{
+							"text": "I like the way you've decorated this room."
+						}
+					]
+				}
+			]
+		}
+	]
+}
+`
+
+var dummyJSONData1 = `{
 	"n_results": 1,
 	"page_number": 1,
 	"results_per_page": 10,
@@ -131,14 +220,10 @@ var dummyJSONData = `{
 						"is": {
 							"text": "líka"
 						},
-						"it": [
-							{ 
-								"text": "probabile"
-							},
-							{ 
-								"text": "text2"
-							}
-						],
+						"it": { 
+							"text": "probabile"
+						},
+						
 						"ja": {
 							"text": "好きだ"
 						},

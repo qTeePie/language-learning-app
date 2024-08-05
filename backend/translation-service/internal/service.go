@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	out "github.com/q10357/language-app/pkg/client"
+	"github.com/q10357/language-app/pkg/utils/json"
 )
 
 // Service provides translation services
@@ -19,12 +20,12 @@ func NewService(client *out.Client) *Service {
 }
 
 // GetTranslation returns the translation for the given parameters
-func (s *Service) GetTranslation(sourceLang, targetLang, word, pos string) (string, error) {
+func (s *Service) GetTranslation(sourceLang, targetLang, word, pos string) ([]json.TranslationResult, error) {
 	translation, err := s.client.Translate(sourceLang, targetLang, word)
 
 	if err != nil {
 		fmt.Printf("Error: %s\n", err)
-		return "", errors.New("translation not found")
+		return nil, errors.New("translation not found")
 	}
 	return translation, nil
 }
