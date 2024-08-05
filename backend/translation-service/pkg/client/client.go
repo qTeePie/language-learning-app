@@ -42,7 +42,7 @@ func (c *Client) Translate(sourceLang, targetLang, text string) ([]json.Translat
 
 }
 
-var dummyJSONData = `{
+var dummyJSONData1 = `{
 	"n_results": 1,
 	"page_number": 1,
 	"results_per_page": 10,
@@ -131,7 +131,7 @@ var dummyJSONData = `{
 }
 `
 
-var dummyJSONData1 = `{
+var dummyJSONData = `{
 	"n_results": 1,
 	"page_number": 1,
 	"results_per_page": 10,
@@ -220,9 +220,14 @@ var dummyJSONData1 = `{
 						"is": {
 							"text": "líka"
 						},
-						"it": { 
-							"text": "probabile"
-						},
+						"it": [
+							{
+								"text": "piacere"
+							},
+							{
+								"text": "gradire"
+							}
+						],
 						
 						"ja": {
 							"text": "好きだ"
