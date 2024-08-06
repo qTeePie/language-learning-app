@@ -24,7 +24,7 @@ func ParseTranslationObj(jsonData []byte, targetLang string) ([]TranslationResul
 			translations = append(translations, TranslationResult{
 				SourceLang: result.Language,
 				TargetLang: targetLang,
-				Text:       result.Headword.Text,
+				Headword:   result.Headword,
 				Sense: Sense{
 					ID:           sense.ID,
 					Definition:   sense.Definition,

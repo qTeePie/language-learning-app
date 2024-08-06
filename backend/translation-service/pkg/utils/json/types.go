@@ -2,10 +2,10 @@ package json
 
 // TranslationResult represents a translation from one language to another
 type TranslationResult struct {
-	SourceLang string `json:"source_lang"`
-	TargetLang string `json:"target_lang"`
-	Text       string `json:"text"`
-	Sense      Sense  `json:"sense"`
+	SourceLang string   `json:"source_lang"`
+	TargetLang string   `json:"target_lang"`
+	Headword   Headword `json:"headword"`
+	Sense      Sense    `json:"sense"`
 }
 
 type APIResponse struct {
