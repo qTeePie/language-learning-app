@@ -14,22 +14,21 @@ import (
 func main() {
 
 	errLoadEnv := godotenv.Load()
-	if errLoadEnv != nil {
-		if !os.IsNotExist(errLoadEnv) {
-			log.Fatal("Error loading .env file", errLoadEnv)
-		}
+	if errLoadEnv != nil && !os.IsNotExist(errLoadEnv) {
+		log.Fatal("Error loading .env file", errLoadEnv)
 	}
 
 	// Read the necessary environment variables
 	baseURL := os.Getenv("TRANSLATION_API_BASE_URL")
-	apiKey := os.Getenv("TRANSLATION_API_KEY")
+	apiKeyHeaderName := os.Getenv("API_KEY_TRANSLATION_API_HEADER_KEY")
+	apiKey := os.Getenv("API_KEY_TRANSLATION_API_HEADER_VALUE")
 
-	r := gin.Default()
-
-	// Initialize client, service, and handler
-	client := out.NewClient(baseURL, apiKey)
+	// Initialize client (singleton), service, and handler
+	client := out.NewClient(baseURL, apiKeyHeaderName, apiKey)
 	service := app.NewService(client)
 	handler := app.NewHandler(service)
+
+	r := gin.Default()
 
 	// Set up the route for translation
 	r.GET("/translate", handler.HandleTranslation)

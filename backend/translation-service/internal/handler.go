@@ -21,12 +21,12 @@ func NewHandler(service *Service) *Handler {
 func (h *Handler) HandleTranslation(c *gin.Context) {
 	sourceLang := c.Query("source_lang")
 	targetLang := c.Query("target_lang")
-	word := c.Query("word")
+	text := c.Query("text")
 	pos := c.Query("pos")
 
 	fmt.Println("Stepped into handler...")
 
-	translation, err := h.service.GetTranslation(sourceLang, targetLang, word, pos)
+	translation, err := h.service.GetTranslation(sourceLang, targetLang, text, pos)
 	if err != nil {
 		c.JSON(http.StatusNotFound, gin.H{"error": err.Error()})
 		return

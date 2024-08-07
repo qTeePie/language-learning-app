@@ -20,8 +20,8 @@ func NewService(client *out.Client) *Service {
 }
 
 // GetTranslation returns the translation for the given parameters
-func (s *Service) GetTranslation(sourceLang, targetLang, word, pos string) ([]json.TranslationResult, error) {
-	translation, err := s.client.Translate(sourceLang, targetLang, word)
+func (s *Service) GetTranslation(sourceLang, targetLang, text, pos string) ([]json.TranslationResult, error) {
+	translation, err := s.client.FetchTranslations(sourceLang, targetLang, text, pos)
 
 	if err != nil {
 		fmt.Printf("Error: %s\n", err)
