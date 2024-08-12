@@ -9,3 +9,5 @@ https://api.verbix.com/conjugator/html
 
 Python:
 https://pypi.org/project/mlconjug3/
+
+Docker image apertium for verb conjagulations & verb POS
