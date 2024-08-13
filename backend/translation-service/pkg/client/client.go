@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"sync" ////thread-safe initialization
 
-	"github.com/q10357/language-app/pkg/utils"
-	"github.com/q10357/language-app/pkg/utils/json"
+	"github.com/q10357/language-app/translation-service/pkg/utils"
+	"github.com/q10357/language-app/translation-service/pkg/utils/json"
 )
 
 // Client handles communication with the external translation API.

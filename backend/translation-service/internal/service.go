@@ -5,8 +5,8 @@ import (
 	"errors"
 	"fmt"
 
-	out "github.com/q10357/language-app/pkg/client"
-	"github.com/q10357/language-app/pkg/utils/json"
+	out "github.com/q10357/language-app/translation-service/pkg/client"
+	"github.com/q10357/language-app/translation-service/pkg/utils/json"
 )
 
 // Service provides translation services

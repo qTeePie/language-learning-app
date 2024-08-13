@@ -11,3 +11,18 @@ Python:
 https://pypi.org/project/mlconjug3/
 
 Docker image apertium for verb conjagulations & verb POS
+
+## Services
+
+### Management Service
+
+Per now for admins of page. Each timeperiod is assigned words (noun / verb or other POS) for the user to learn.
+This service manages the flow of learning on the app (as presented to user).
+
+#### Endpoints
+
+### Translation Service
+
+API calls to free translation APIs to fetch translations for given word.
+
+#### Endpoints
