@@ -7,8 +7,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 
-	app "github.com/q10357/language-app/internal"
-	out "github.com/q10357/language-app/pkg/client"
+	app "github.com/q10357/language-app/translation-service/internal"
+	out "github.com/q10357/language-app/translation-service/pkg/client"
 )
 
 func main() {
