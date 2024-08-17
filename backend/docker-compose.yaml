@@ -2,10 +2,15 @@ version: '3.8'
 services:
   authservice:
     build: 
-      context: ./authservice
+      context: ./auth-service
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
     env_file:
-      - ./authservice/.env
-
+      - ./auth-service/.env
+  apertium:
+    build:
+      context: ./apertium
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081" 
