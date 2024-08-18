@@ -4,13 +4,14 @@ Translation happens visa Lexica API
 Source Dictionary Password (english) &rarr; target language. </br>
 Output is checked against Lexica Multigloss Dictionary to limit senses to most frequent with correct POS (place of speech).
 
-Verb Conjugation Possible APIs / packages
+Verb Conjugation:
 https://api.verbix.com/conjugator/html
+https://sourceforge.net/p/apertium/mailman/apertium-stuff/thread/CAPrd20HFrnHMD5cyAY5ipZ%2BDAzRn82hy2JHGW4UpbBtkT5iVnA%40mail.gmail.com/
 
 Python:
 https://pypi.org/project/mlconjug3/
 
-Docker image apertium for verb conjagulations & verb POS
+Apertium-APY repository:
 Github Repo: https://github.com/apertium/apertium-apy
 
 ## Services
