@@ -11,6 +11,7 @@ Python:
 https://pypi.org/project/mlconjug3/
 
 Docker image apertium for verb conjagulations & verb POS
+Github Repo: https://github.com/apertium/apertium-apy
 
 ## Services
 

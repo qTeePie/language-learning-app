@@ -1,16 +1,19 @@
 version: '3.8'
 services:
-  authservice:
-    build: 
-      context: ./auth-service
-      dockerfile: Dockerfile
-    ports:
-      - "8080:8080"
-    env_file:
-      - ./auth-service/.env
-  apertium:
+  apertium-apy:
     build:
       context: ./apertium
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile  # Name of your Dockerfile
+    container_name: apertium-apy
     ports:
-      - "8081:8081" 
+      - "2737:2737"  # Expose port 2737 for Apertium-APY
+
+#  authservice:
+#build: 
+#  context: ./auth-service
+#  dockerfile: Dockerfile
+#ports:
+#  - "8080:8080"
+#env_file:
+#  - ./auth-service/.env
+  
