@@ -28,3 +28,5 @@ This service manages the flow of learning on the app (as presented to user).
 API calls to free translation APIs to fetch translations for given word.
 
 #### Endpoints
+
+---
