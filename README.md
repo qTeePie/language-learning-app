@@ -1,5 +1,6 @@
 # 🧠 Language Learning App
 
+> ⚠️ This project is a work in progress — not fully functional yet, but development is in motion! Stay tuned. 💙
 > Learn. Quiz. Repeat. 💫 — a mobile-first language learning experience built with love, React Native, and a spicy Go backend.
 
 ---
