@@ -1,32 +1,64 @@
-﻿# Dictionary API language learning app
+# 🧠 Language Learning App
 
-Translation happens visa Lexica API
-Source Dictionary Password (english) &rarr; target language. </br>
-Output is checked against Lexica Multigloss Dictionary to limit senses to most frequent with correct POS (place of speech).
-
-Verb Conjugation:
-https://api.verbix.com/conjugator/html
-https://sourceforge.net/p/apertium/mailman/apertium-stuff/thread/CAPrd20HFrnHMD5cyAY5ipZ%2BDAzRn82hy2JHGW4UpbBtkT5iVnA%40mail.gmail.com/
-
-Python:
-https://pypi.org/project/mlconjug3/
-
-Apertium-APY repository:
-Github Repo: https://github.com/apertium/apertium-apy
-
-## Services
-
-### Management Service
-
-Per now for admins of page. Each timeperiod is assigned words (noun / verb or other POS) for the user to learn.
-This service manages the flow of learning on the app (as presented to user).
-
-#### Endpoints
-
-### Translation Service
-
-API calls to free translation APIs to fetch translations for given word.
-
-#### Endpoints
+> Learn. Quiz. Repeat. 💫 — a mobile-first language learning experience built with love, React Native, and a spicy Go backend.
 
 ---
+
+## 📚 Dictionary & Translation Features (In Progress)
+
+This app uses a combo of free APIs and dictionaries to power translation, verb conjugation, and word sense disambiguation — all the good nerdy stuff behind the scenes 😏
+
+### 🧬 Translation Flow:
+- Source: **Dictionary Password (English)** ➜ Target language
+- Translations are fetched via **Lexica API**
+- Outputs are filtered through **Lexica Multigloss Dictionary** to ensure correct *part of speech (POS)* and limit meanings to the most frequent ones 🔍
+
+### 🔄 Verb Conjugation:
+We’re exploring a few cool tools for dynamic verb conjugation:
+- [`api.verbix.com`](https://api.verbix.com/conjugator/html)
+- [`mlconjug3`](https://pypi.org/project/mlconjug3/) — Python package for multilingual conjugation
+- [`apertium-apy`](https://github.com/apertium/apertium-apy) — Open-source machine translation API
+
+---
+
+## ⚙️ Backend (Go + MongoDB)
+
+The backend is written in **Go (Golang)** using the `gin` framework and stores user data with MongoDB. It also powers translation lookups and manages the learning flow.
+
+### 🧠 Services
+
+#### 🌐 Translation Service
+Handles all external API calls for translations and conjugations.
+- Uses Lexica, Apertium, and Verbix integrations (with fallback logic in the works)
+
+#### 📋 Management Service
+Primarily for admin usage — assigns vocabulary (by POS type) to users per time period, structures the learning journey, and tracks completion.
+
+---
+
+## 📱 Frontend
+
+React Native (Expo) app built with TypeScript and styled-components. Designed for swipey, daily learning on-the-go.
+
+---
+
+## 🛠️ Installation (Local Dev)
+
+### Prerequisites:
+- Node.js + Expo CLI
+- Go 1.21+
+- MongoDB (local or cloud)
+
+### Run Frontend:
+```bash
+cd frontend
+npm install
+npm start
+```
+
+### Run Backend:
+```bash
+cd backend
+go mod tidy
+go run main.go
+```
